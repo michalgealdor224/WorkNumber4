@@ -1,7 +1,7 @@
 public class Property {
 
     private Address address;
-    private int numbersOfRooms;
+    private int roomsNumber;
     private int price;
     private int type;
     private boolean forRent;
@@ -10,7 +10,7 @@ public class Property {
     private User user;
 
     public Property (int numbersOfRooms, int price, int type, boolean forRent, int numberOfHouse, int numberOfFloor, User user) {
-        this.numbersOfRooms=numbersOfRooms;
+        this.roomsNumber =numbersOfRooms;
         this.price=price;
         this.type=type;
         this.forRent=forRent;
@@ -37,12 +37,12 @@ public class Property {
         }
         if (this.type==PRIVET_HOUSE){
             return  "private house"+ " " +"-" +" " +(this.forRent?"for rent":"for sale") + ":" +"\n" +
-                    "" + this.numbersOfRooms + " "+ "rooms"+ " " + "\n" +
+                    "" + this.roomsNumber + " "+ "rooms"+ " " + "\n" +
                     "price:"+ "" + this.price + "$" +" \n" +
                     "contact info:"+ user;
         }
         else  return   typeOfProperty+ " " +"-" +" " +(this.forRent?"for rent":"for sale") + ":" +"\n" +
-                "" + this.numbersOfRooms + " "+ "rooms"+ " " + "floor" + " " + this.numberOfFloor+ "\n" +
+                "" + this.roomsNumber + " "+ "rooms"+ " " + "floor" + " " + this.numberOfFloor+ "\n" +
                 "price:"+ "" + this.price + "$" +" \n" +
                 "contact info:"+ user;
     }
@@ -51,8 +51,8 @@ public class Property {
         return this.address;
     }
 
-    public int getNumbersOfRooms () {
-        return this.numbersOfRooms;
+    public int getRoomsNumber() {
+        return this.roomsNumber;
     }
     public int getPrice () {
         return this.price;
@@ -77,8 +77,8 @@ public class Property {
         this.address = address;
     }
 
-    public void setNumbersOfRooms (int numbersOfRooms) {
-        this.numbersOfRooms= numbersOfRooms;
+    public void setRoomsNumber(int roomsNumber) {
+        this.roomsNumber = roomsNumber;
     }
     public void setPrice (int price) {
         this.price=price;

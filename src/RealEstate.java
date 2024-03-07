@@ -405,7 +405,7 @@ public class RealEstate {
         }
         for (int i = 0; i < properties.length; i++) {
             if ((properties[i].isForRent() == status || isRent == DOESNT_MATTERS) && (properties[i].getType() == type || type == DOESNT_MATTERS)
-                    && (properties[i].getNumbersOfRooms() == numberOfRooms || numberOfRooms == DOESNT_MATTERS) &&
+                    && (properties[i].getRoomsNumber() == numberOfRooms || numberOfRooms == DOESNT_MATTERS) &&
                     (properties[i].getPrice() > minimum || minimum == DOESNT_MATTERS) &&
                     (properties[i].getPrice() < maximum || maximum == DOESNT_MATTERS)) {
                 ifGood = true;
